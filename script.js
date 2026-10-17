@@ -1,15 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const button = document.getElementById("ButtonName");
-    const output = document.getElementById("output");
-    
-    button.addEventListener("click", () => {
-        runScript();
-    });
-    function runScript() {
-        console.log("JavaScript executed!");
-
-        output.textContent = "JavaScript executed successfully!";
-
-        alert("Hello from script.js!");
-    }
-});
+WaCleanerBttn.onclick = () => {
+    const input = prompt("Enter your text:");
+    const regex = prompt("Enter regex pattern:");
+    const output = input.replace(new RegExp(regex, "g"), "");
+alert("Output:\n" + output)
